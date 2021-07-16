@@ -71,7 +71,7 @@ class UserOauthUserProvider implements UserOauthUserProviderInterface
         }
 
         $oauthUserTransfer
-            ->setUserIdentifier($this->utilEncodingService->encodeJson(['username' => $userTransfer->getUsername()]))
+            ->setUserIdentifier($this->utilEncodingService->encodeJson(['username' => $userTransfer->getUsername(), 'id' => $userTransfer->getIdUser()]))
             ->setIsSuccess(true);
 
         return $oauthUserTransfer;
